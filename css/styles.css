@@ -518,7 +518,7 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  align-items: fcenter;
+  align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--primary-light-color);
@@ -615,7 +615,7 @@ img {
   color: var(--primary-light-color);
   background: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
-  overflow: auto;
+  overflow: hidden;
   transition: transform 250ms var(--timing-function);
 }
 
@@ -691,7 +691,7 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-dark-color);
-  margin-bottom: 30px;
+  margin-bottom: 12px;
 }
 
 .input-field {
@@ -744,6 +744,11 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: transparent;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
 }
 
 .modal-button {
@@ -775,6 +780,25 @@ img {
   padding-left: 13px;
 }
 
+.policy-label {
+  display: flex;
+  align-items: center;
+}
+
+.policy-icon {
+  border: 2px solid var(--secondary-dark-color);
+  border-radius: 2px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-right: 7px;
+  transition: background-color 250ms var(--timing-function), border 250ms var(--timing-function);
+}
+
 .policy-link {
   color: var(--accent-color);
+  margin-left: 3px;
+}
+
+.policy-input:checked + .policy-label > .policy-icon {
+  background-color: var(--accent-color);
+  border: #2196f3;
 }
